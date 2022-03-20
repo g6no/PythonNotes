@@ -344,4 +344,32 @@
 # else:
 #     print('Incorrect Message')
 
+#####################                               Lecture 7 Python                                ######################
+# Two types of repetition structures:
+# 1- condition controlled loop (either true or false) --> while loop
+# 2- count controlled loop (for i in range(n)) --> for loop
+
+# while loop works on a pre-test condition, which it tests before executing the statements inside the loop
+
+# count = 10
+# while count < 1:
+#     print('Hello World')
+
+# in this example, nothing will be printed
+
+# in-class exercise
+# userNum = int(input('Enter an integer, or -1 to exit: '))
+# userMax = userNum
+#
+# while userNum != -1:
+#     if userMax < userNum:
+#         userMax = userNum
+#     userNum = int(input('Enter an integer, or -1 to exit: '))
+#
+# if userMax != -1:
+#     print(userMax)
+# else:
+#     print('No input')
+
+
 
