@@ -152,7 +152,6 @@
 # print('Hi! I\\\'m Sebastien.')
 
 
-
 #####################                               Lecture 5 Python                                ######################
 
 # Magic numbers are unexplained numbers appearing in code
@@ -237,4 +236,112 @@
 #                 print('D')
 #             else:
 #                 print('F')
+
+
+#####################                               Lecture 6 Python                                ######################
+# using elif
+
+# if condition:
+#     statement
+# elif condition:
+#     statement
+# else:
+#     statement
+
+# And operator
+# raining = False
+# temp = 0
+#
+# if temp < 20 and raining == True:
+#     print('Cold')
+# else:
+#     print('Not Cold')
+
+# Output: Not Cold
+
+# Or operator
+# raining = False
+# temp = 0
+#
+# if temp < 20 or raining == True:
+#     print('Cold')
+# else:
+#     print('Not Cold')
+
+# Output: Cold
+
+# not operator
+# raining = False
+# if not(raining):
+#     print('Not Raining')
+
+# Output: Not Raining
+
+
+# Checking numeric range and simplified chain comparison
+
+# x = 15
+# if x >= 10 and x <= 20:
+#     print('in range')
+
+# if 10 <= x <= 20: #using this type of expression is allowed in python
+#     print('in range')
+
+
+# chain comparison
+# x = 5
+# 0 <= x <= 5
+# result: True
+# 0 <= x <= 5 > 1
+# result: True
+# 0 <= x <= 5 > 5
+# result: False
+
+# x = 3
+# print(0 <= x <= 5 < 5) #incorrect expression
+# print(0 <= x <= 5 and x < 5)
+
+# x = 3
+#
+# if x:
+#     print('True')
+# x = 0
+# if x:
+#     print('True')
+# else:
+#     print('False')
+# will print as long as x != 0
+
+# userColor = input('Enter your favorite color: ')
+#
+# if userColor.lower() == 'red':
+#     print('I like Red too')
+# else:
+#     print(f'I don\'t like {userColor}, I prefer red')
+
+# firstNum = int(input('Enter first num: '))
+# secondNum = int(input('Enter second num: '))
+#
+# if firstNum % secondNum == 0:
+#     print('%s multiple of %s' %(secondNum, firstNum))
+# else:
+#     print('%s not a multiple of %s' %(secondNum, firstNum))
+#
+# if not(firstNum % secondNum):
+#     print('%s multiple of %s' % (secondNum, firstNum))
+# else:
+#     print('%s not a multiple of %s' % (secondNum, firstNum))
+
+
+# bonus, extra q: Ask the user to enter a number between 10 and 20(inclusive)
+# If they enter a number within the range display "Thank you", otherwise
+# display 'Incorrect Message'
+
+# userNum = int(input('Enter a number between 10 and 20: '))
+#
+# if 10 <= userNum <= 20:
+#     print('Thank you')
+# else:
+#     print('Incorrect Message')
+
 
