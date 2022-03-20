@@ -357,7 +357,7 @@
 
 # in this example, nothing will be printed
 
-# in-class exercise
+# in-class exercise 1
 # userNum = int(input('Enter an integer, or -1 to exit: '))
 # userMax = userNum
 #
@@ -370,6 +370,23 @@
 #     print(userMax)
 # else:
 #     print('No input')
+
+# in this example, -1 is a sentinel value
+# sentinel values inform the user how to exit the program
+# sentinel values have to be logical (intuitive), e.g.: if asking for weights,
+# sentinel value can be 0 since no one weighs 0 Kg
+
+
+# in-class exercise 2
+# for i in range(11):
+#     if i % 2 == 0:
+#         print(i, end=' ')
+# print('\n')
+#
+# for i in [0, 2, 4, 6, 8, 10]:
+#     print(i,end=' ')
+# print('\n')
+
 
 
 
