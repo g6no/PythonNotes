@@ -387,6 +387,7 @@
 #     print(i,end=' ')
 # print('\n')
 
+#####################                               Lecture 8 Python                                ######################
 
 # for name in ['Winken', 'Blinken', 'Nod']:
 #     print(name)
@@ -398,7 +399,43 @@
 # print('\n')
 
 # range function syntax:
-# One arguement: ending limit, default start = 0
-# Two arguements: start and end values
+# keep in mind, end vlaues not included
+# One arguement: ending limit, default start = 0, default step 1
+# Two arguements: start and end values, default step 1
 # Three values: start, end , step
+
+# for num in range(-1):
+#     print(num)
+#     no result in this case, doesnt enter the loop
+
+# for num in range(10,1,-1):
+#     print(num)
+
+# for num in range(1,10,2):
+#     print(num)
+
+# num = 1
+# while num < 10:
+#     print(num)
+#     num += 2
+
+# in class exercise:
+# START = 60
+# END = 130
+# INCREMENT = 10
+# FACTOR = 0.6214
+#
+# print('KPH\tMPH\n----------------')
+# for kph in range(START, END+1, INCREMENT):
+#     mph = kph * FACTOR
+#     print(f'KPH = {kph}\tMPH = {mph:.2f}')
+#
+# kph = START
+# while kph <= END:
+#     mph = kph * FACTOR
+#     print(f'KPH = {kph}\tMPH = {mph:.2f}')
+#     kph += INCREMENT
+
+
+
 
