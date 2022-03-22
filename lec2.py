@@ -388,5 +388,17 @@
 # print('\n')
 
 
+# for name in ['Winken', 'Blinken', 'Nod']:
+#     print(name)
 
+# printing all even numbers from 0 to 100 is difficult, that's why we use a range function
+# for i in range(101):
+#     if i % 2 == 0:
+#         print(i, end=' ')
+# print('\n')
+
+# range function syntax:
+# One arguement: ending limit, default start = 0
+# Two arguements: start and end values
+# Three values: start, end , step
 
