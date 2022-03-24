@@ -372,7 +372,7 @@
 #     print('No input')
 
 # in this example, -1 is a sentinel value
-# sentinel values inform the user how to exit the program
+# sentinel values inform the user how to exit the loop
 # sentinel values have to be logical (intuitive), e.g.: if asking for weights,
 # sentinel value can be 0 since no one weighs 0 Kg
 
@@ -436,6 +436,37 @@
 #     print(f'KPH = {kph}\tMPH = {mph:.2f}')
 #     kph += INCREMENT
 
+#####################                               Lecture 9 Python                                ######################
 
+# Multiple assignment
+# a, b = 1, 3
+# print(a, b)
+
+# computer can't tell the difference between good and bad data
+# we solve this problem by validating the input through a loop
+# GIGO: garbage input --> garbage output
+
+# example:
+# Get a test score
+# score = float(input('Enter the test score'))
+#
+# while score < 0 or score > 100:
+#     score = float(input('Invalid Input, enter the correct score'))
+
+# for hour in range(24):
+#     for minute in range(60):
+#         for sec in range(60):
+#             print(f'{hour}:{minute}:{sec}')
+
+# number of total iterations = 24 * 60 * 60
+
+# numOfStudents = int(input('Total Number of Students: '))
+# numOfTests = int(input('Total Number of Tests per students: '))
+#
+# for i in range(1, numOfStudents + 1):
+#     totalSum = 0
+#     for j in range(numOfTests):
+#         totalSum += float(input('Test Score: '))
+#     print(f'The average for student number {i} is {totalSum/numOfTests}')
 
 
