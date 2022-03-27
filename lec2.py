@@ -470,3 +470,158 @@
 #     print(f'The average for student number {i} is {totalSum/numOfTests}')
 
 
+#####################                               Lecture 9 Python                                ######################
+
+# y = 100
+# while y > 0:
+#     print(y)
+#     y = y + 1
+# error infinite loop, change to y = y + 1
+
+# i = 0
+# while i < 5:
+#     j = 1
+#     while j <= 2:
+#         j = j + 1
+#     i += j + 1
+#
+# print(i)
+# output: 8
+
+# while loops can have an else statement
+# when the loop finishes ender normal conditions, the else statements are executed
+# i = 0
+# while i < 4:
+#     i +=1
+#     print(i)
+# else:
+#     print('Loop finished')
+
+# break statement
+# will immediately exit the loop when executed
+# it will also skip the else statement
+
+# x = 3
+# while x < 5:
+#     print(x)
+#     x += 1
+# else:
+#     print('Done')
+# x = 3
+# while x < 5:
+#     print(x)
+#     x += 1
+#     print('Done')
+# x = 3
+# while x < 5:
+#     if x == 4:
+#         break
+#     print(x)
+#     x += 1
+# else:
+#     print('Done')
+
+# x = 1
+# while x <= 10:
+#     if x == 5:
+#         break
+#     print(x)
+#     x += 1
+
+# this while loop will stop when x = 5
+
+# write random number and make a guessing game
+# import random
+#
+# randNum = random.randint(0, 100)
+# print(randNum)
+# userNum = int(input('Guess a number: '))
+#
+# while 0 <= userNum <= 100:
+#     if userNum > randNum:
+#         print('Guessed too high.')
+#     elif userNum < randNum:
+#         print('Guessed too low.')
+#     else:
+#         print(f'You guessed it. The number was: {randNum}')
+#         break
+#     userNum = int(input('Guess a number: '))
+# else:
+#     print(f'You quit early, the number was {randNum}')
+
+
+# Another solution without break
+# randNum = random.randint(0, 100)
+# print(randNum)
+# userNum = int(input('Guess a number: '))
+#
+# while 0 <= userNum <= 100 or userNum != randNum:
+#     if userNum > randNum:
+#         print('Guessed too high.')
+#     elif userNum < randNum:
+#         print('Guessed too low.')
+#     userNum = int(input('Guess a number: '))
+# else:
+#     if userNum != randNum:
+#         print(f'You quit early, the number was {randNum}')
+#     else:
+#         print(f'You guessed it. The number was: {randNum}')
+
+
+# do while loops in python
+# age = int(input('Age: '))
+# while age >= 1:
+#     age = int(input('Age: '))
+#
+# # Solution: using while True:
+# while True:
+#     age = int(input('Age: '))
+#     if age < 1:
+#         break
+
+# do while in c++
+#     do{
+#     statement
+# } while(condition);
+
+# continue in python
+# it will skip the code below it and goes back to the start
+
+# for x in range(1,10+1):
+#     if x == 5:
+#         continue
+#
+#     print(x)
+
+# sum = 0
+# while True:
+#     userNum_str = input('Enter a number: ')
+#     if userNum_str == '.':
+#         break
+#     else:
+#         userNum = int(userNum_str)
+#         if userNum % 2 == 0:
+#             sum += userNum
+# print(sum)
+
+
+# exercise on break inside nested while loops
+# x = 3
+# y = 4 y = 3 y = 2
+# x = 2
+# y = 2
+# x = 1
+# y = 2
+# x = 3
+# y = 4
+
+# while x > 0:
+#     print('\nx =', x)
+#
+#     while y > 0:
+#         print('y =', y, end=' ')
+#         if y == 2:
+#             break
+#         y -= 1
+#     x -= 1
+
