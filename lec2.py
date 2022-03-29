@@ -641,3 +641,56 @@
 # Modularized program: program wherein each task within the program is in
 # its own function
 
+# Two type of functions:
+# 1- A void function
+# - void function = procedure: doesn't return output
+# 2- value returning function: returns output
+
+# Defining a function and calling it
+# def function_name():
+#     statement
+#     statement
+
+# function name should include a verb
+
+# example function
+# def print_message(message):
+#     print(message)
+#
+#
+# print_message('Hello')
+
+# function definition has to be above the function call
+
+# main function: called when the program starts
+# calls other functions when they are needed and
+# defines the mainlines logic of the program
+
+# main function example
+# def main():
+#     print('I have a message for you.')
+#     message()
+#     print('Goodbye!')
+#
+# def message():
+#     print('I am Arthur')
+#     print('King of the Britons')
+#
+# main()
+
+# Each block of code must be indented
+
+# Value-returning functions can be useful in specific situations
+
+def IsEven(num):
+    isEven = True
+    if num % 2 != 0:
+        isEven = False
+    return isEven
+
+
+n = int(input('Enter a number: '))
+if IsEven(n):
+    print('The number is even')
+else:
+    print('The number is odd')
