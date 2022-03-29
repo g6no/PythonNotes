@@ -625,3 +625,19 @@
 #         y -= 1
 #     x -= 1
 
+# Solution using continue instead of break
+# sum = 0
+# n = input('Enter: ')
+# while n != '.':
+#     n = int(n)
+#     if n % 2 != 0:
+#         n = input('Enter: ')
+#         continue
+#     sum += n
+#     n = input('Enter: ')
+# print(sum)
+
+# Function: group of statements within a program that preforms a specific task
+# Modularized program: program wherein each task within the program is in
+# its own function
+
