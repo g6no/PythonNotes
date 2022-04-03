@@ -697,3 +697,24 @@
 
 #####################                               Lecture 10 Python                                ######################
 
+# def ReturnDigit(x, position):
+#     x = str(x)
+#     return int(x[len(x)-position])
+#
+# y = ReturnDigit(7392564, 5)
+# print(y)
+
+# def get_digit_position(num, position):
+#     my_digit = num // (10 ** (position - 1)) % 10
+#
+#     return my_digit
+#
+# num = int(input('Enter an integer: '))
+# position = int(input('Enter the position: '))
+#
+# print('The digit at', position, 'is:', get_digit_position(num, position))
+
+def show_interest(interest, rate, periods):
+    print(interest*rate*periods)
+
+show_interest(10,10, rate=10)
