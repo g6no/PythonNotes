@@ -682,15 +682,18 @@
 
 # Value-returning functions can be useful in specific situations
 
-def IsEven(num):
-    isEven = True
-    if num % 2 != 0:
-        isEven = False
-    return isEven
+# def IsEven(num):
+#     isEven = True
+#     if num % 2 != 0:
+#         isEven = False
+#     return isEven
+#
+#
+# n = int(input('Enter a number: '))
+# if IsEven(n):
+#     print('The number is even')
+# else:
+#     print('The number is odd')
 
+#####################                               Lecture 10 Python                                ######################
 
-n = int(input('Enter a number: '))
-if IsEven(n):
-    print('The number is even')
-else:
-    print('The number is odd')
