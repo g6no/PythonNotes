@@ -714,7 +714,106 @@
 #
 # print('The digit at', position, 'is:', get_digit_position(num, position))
 
-def show_interest(interest, rate, periods):
-    print(interest*rate*periods)
+# def show_interest(interest, rate, periods):
+#     print(interest*rate*periods)
+#
+# show_interest(10,10, rate=10)
 
-show_interest(10,10, rate=10)
+
+#####################                               Lecture 11 Python                                ######################
+# Named parameters are a way to give default values to parameters
+
+# def box (height = 10, width = 10, length = 10):
+#     print(height, width, length)
+
+# read Named and default arguements/parameters
+
+# (3,7,10)
+# (25, 5, 24)
+# (100, 5, 50)
+# error
+
+# def func(a, b=5, c=10):
+#     print(a, b, c)
+#
+#
+# func(3, 7)
+# func(25, c=24)
+# func(c=50, a=100)
+# func(c = 50) --> ERROR
+
+# Global variable
+
+# my_value = 10
+#
+# def show_value():
+#     print(my_value)
+#
+# show_value() # --> Prints 10
+
+# number = 10
+#
+# def main():
+#     global number
+#     number = int(input('Enter a number: '))
+#     show_number()
+#
+# def show_number():
+#     print("The number is", number)
+#
+# main()
+
+# we use global to change the value of a global variable
+
+# x = 5
+# y = 4
+#
+# def sum_xy():
+#     x = x + 3
+#     print(x+y)
+#     error  here since x is not defined
+#
+# sum_xy()
+
+
+# x = 5
+# y = 4
+#
+# def sum_xy():
+#     global x
+#     x = x + 3
+#     print(x+y)
+#
+# print(x) # --> x = 5
+# sum_xy() # --> 12
+# print(x) # --> x = 8
+# because the x changed after the function call
+
+# x = 5
+# y = 4
+#
+# def sum_xy():
+#     x = y + 3
+#     print(x+y)
+#
+#
+# sum_xy()
+# print(x,y)
+
+# import random
+# random.seed(10)
+# for i in range(10):
+#     result = random.randint(1,2)
+#     print(result)
+#     if result == 1:
+#         print('Heads')
+#     else:
+#         print('tails')
+
+
+# import can also be written by using: from random import *, from random import randint
+
+# we use random.seed(int) at the start of the program, and it fixes
+
+#####################                               Lecture 12 Python                                ######################
+import 
