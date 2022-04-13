@@ -816,4 +816,138 @@
 # we use random.seed(int) at the start of the program, and it fixes
 
 #####################                               Lecture 12 Python                                ######################
-import 
+#nothing
+
+
+
+
+#####################                               Lecture 13 Python                                ######################
+
+# Sequence: an object that contains multiple items of data
+# Python Sequence types;
+# - List (mutable)
+# - tuples (immutable)
+# - strings (immutable)
+
+# List: an object that contains multiple date items
+# list = [item1, item2, 3, 4.0]
+# can contain different types
+
+# for item in list:
+#     print(item) #this will print every item in a list on a seperate line
+
+# for i in range(len(list)):
+#     sum += list[i]
+#
+# this accesses every variable in a list by index
+
+
+#####################                               Lecture 14 Python                                ######################
+# lst = [1,2,3,4]
+# lst.append([1,2,3])
+# print(lst)
+
+# list1 = [1,2,3]
+# list1.extend(4) # error
+# list1.append(4) #[1,2,3,4]
+# list1.append([4,5,6]) # [1,2,3,[4,5,6]]
+# list1.extend([4,5,6]) # [1,2,3,4,5,6]
+
+# list1 = [1,2,3]
+# list1.append('xyz') #[1, 2, 3, 'xyz']
+# print(list1)
+# list1.extend('abc') #[1, 2, 3, 'xyz', 'a', 'b', 'c']
+# print(list1)
+# list1 += 'max' #[1, 2, 3, 'xyz', 'a', 'b', 'c', 'm', 'a', 'x'] has same function as extend
+# print(list1)
+# list1 = list1 + 'min'
+# print(list1)
+
+# list2 = [1,2,3]
+# list3 = [4,5,6]
+# list2 += list3
+# print(list2)
+# list2 = [1,2,3]
+# list2 = list2 + list3
+# print(list2)
+
+# def main():
+#     food = ['Pizza', 'Burgers', 'Chips']
+#     print(food)
+#
+#     item = input('Which item should I change?')
+#     try:
+#         item_index = food.index(item)
+#         new_item = input('Enter the new value: ')
+#         food[item_index] = new_item
+#         print(food)
+#
+#     except ValueError:
+#         print('item not in list')
+#
+# main()
+
+# list1 =[1,2,3]
+# list1.insert(9,4)
+# print(list1)
+
+# insert, if invalid index replace with a valid one withous issuing indexErrorExcpetion
+
+# food = ['Chips', 'Pasta', 'Pizza', 'Pickels']
+# food.sort()
+# print(food)
+# food.sort(reverse=True)
+# print(food)
+# food.remove('Pizza')
+# print(food)
+#
+# popTeam = food.pop()
+# print(popTeam)
+# print(food)
+#
+# food = ['Chips', 'Pasta', 'Pizza', 'Pickels']
+# # popTeamEpic = food.pop(0)
+# # print(popTeamEpic)
+#
+# # when using pop and indexing a value, index has to be withing fucntion
+#
+# del food[2]
+# list2 = [1,2,3,4,5,6,9,7]
+# print(max(list2))
+# print(min(list2))
+
+# n = int(input('Enter the number of numbers: '))
+#
+# lst = []
+# total = 0
+# for i in range(n):
+#     num = int(input(f'Enter number {i+1}: '))
+#     total += num
+#     lst.append(num)
+#
+# print(lst)
+# print(total/len(lst))
+
+x =[1,2,3,4,5]
+y = [8,6,10,7,9]
+z = []
+
+x.append(6) #a
+y.sort()
+x.extend(y)
+print(x)
+z = [1] * 5
+print(z)
+for i in range(5):
+    z.append(2)
+print(z)
+print(sum(z))
+z.insert(5,3)
+print(z)
+x.extend(z[4:7])
+print(x)
+print(min(x))
+print(max(x))
+x.remove(1)
+print(x)
+
