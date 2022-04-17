@@ -737,10 +737,10 @@
 #     print(a, b, c)
 #
 #
-# func(3, 7)
-# func(25, c=24)
-# func(c=50, a=100)
-# func(c = 50) --> ERROR
+# func(3, 7) --> 3 7 10
+# func(25, c=24) --> 25 5 24
+# func(c=50, a=100) --> 100 5 50
+# func(c = 50) #--> ERROR, a value is missing
 
 # Global variable
 
@@ -928,26 +928,141 @@
 # print(lst)
 # print(total/len(lst))
 
-x =[1,2,3,4,5]
-y = [8,6,10,7,9]
-z = []
+# x =[1,2,3,4,5]
+# y = [8,6,10,7,9]
+# z = []
+#
+# x.append(6) #a
+# y.sort()
+# x.extend(y)
+# print(x)
+# z = [1] * 5
+# print(z)
+# for i in range(5):
+#     z.append(2)
+# print(z)
+# print(sum(z))
+# z.insert(5,3)
+# print(z)
+# x.extend(z[4:7])
+# print(x)
+# print(min(x))
+# print(max(x))
+# x.remove(1)
+# print(x)
 
-x.append(6) #a
-y.sort()
-x.extend(y)
-print(x)
-z = [1] * 5
-print(z)
-for i in range(5):
-    z.append(2)
-print(z)
-print(sum(z))
-z.insert(5,3)
-print(z)
-x.extend(z[4:7])
-print(x)
-print(min(x))
-print(max(x))
-x.remove(1)
-print(x)
+# import random
+#
+# x = random.randrange(1,10)
+#
+# while x != 10:
+#     print(x)
+#     x = random.randrange(1, 10)
+
+# if 'hello' not in 'hello everyone':
+#     print('hkime')
+
+#####################                               Lecture 15 Python                                ######################
+# list1 = [1,2,3,4]
+# list2 = list1
+#
+# print(list1)
+# list2.append(5) --> both of these variables point to the same values, so a change in one is a change in both
+# print(list1)
+
+# to create a copy of a list, either use a for loop or use concatenation
+# list1 = [1,2,3,4]
+# list2 = []
+# for item in list1:
+#     list2.append(item)
+#
+# or
+#
+# list1 = [1,2,3,4]
+# list2 = [] + list1
+
+# my_int = 27
+# your_int = my_int
+# print(your_int)
+# your_int = 3
+# print(your_int)
+# print(my_int)
+# this does not cause a problem, since integers are immutable, while lists are mutable
+# the change (assignment) creates a copy of the object, and does not change the original value
+
+# my_list = [1,2,3]
+# newLst = my_list[:]
+# newLst.append(4)
+# print(my_list)
+# this is a suitable way to copy single-dimensional lists
+
+# a_list = [1,2,3]
+# b_list = [5,6,7]
+# a_list.append(b_list)
+# b_list.append(10)
+# print(a_list)
+
+# this is called a shallow copy, since it uses the reference
+
+# if we want a full copy, we can use deepcopy
+# import copy
+# alist = [1,2,3,4]
+# blist = copy.deepcopy(alist)
+
+# a  = [1,2,3,[4,5]]
+# b = []
+# for item in a:
+#     if type(item) != "<class list>":
+#         b.append(item)
+#     else:
+#         c = []
+#         for elem in item:
+#             c.append(elem)
+#         print(c)
+#         b.append(c)
+#     print(b)
+# import copy
+# a_list = [1,2,3]
+# b_list = [5,6,7]
+# a_list.append(b_list)
+# c_list = copy.deepcopy(a_list)
+# b_list[0] = 1000
+# print(a_list)
+# print(b_list)
+# print(c_list)
+# the change done on b is not reflected on c, since it is a deep
+
+#two dimensional list, is  a list that contains other lists as an element
+
+# mtrx = [[0,0,0,0,0], [0,0,0,0,0], [0,0,0,0,0]]
+# for i in range(len(mtrx)):
+#     print(f'Enter elements of row {i}')
+#     for j in range(len(mtrx[i])):
+#         mtrx[i][j] = int(input(''))
+#     print(mtrx[i])
+
+# def main():
+#     numbers = [2,4,6,8,10]
+#     print('The total is', get_total(numbers))
+#     print(numbers)
+#
+# def get_total(val_list):
+#     total = 0
+#
+#     for num in val_list:
+#         total += num
+#
+#     val_list.append(12)
+#     return total
+#
+# main()
+
+# def my_fun(param):
+#     param.append(4)
+#     return param
+#
+# my_list = [1,2,3]
+# new_list = my_fun(my_list)
+# print(my_list, new_list)
+# the append inside the function has changed the var my_list, and new_list takes the value of list returned by my_fun
 
