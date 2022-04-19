@@ -1066,3 +1066,129 @@
 # print(my_list, new_list)
 # the append inside the function has changed the var my_list, and new_list takes the value of list returned by my_fun
 
+
+# def my_fun(param):
+#     param.append(4)
+#     return param
+#
+# my_list = [1,2,3]
+# new_list = my_fun(my_list)
+# print(my_list, new_list)
+# new_list.extend([7,8,9]) # any change made to the new_list, since it points to the same memory place, will occur in both
+# this is because lists are mutables
+# print(my_list,new_list)
+# the append inside the function has changed the var my_list, and new_list takes the value of list returned by my_fun
+
+# def fn1(arg1 = [], arg2 = 27):
+#     arg1.append(arg2)
+#     print('arg1',arg1)
+#     return arg1
+#
+# my_list = [1,2,3]
+# print(fn1(my_list,4)) # my list changes to [1,2,3,4]
+# print(fn1(my_list))  # my list changes to [1,2,3,4,27]
+# print('my list', my_list)
+# print(fn1()) # returns [27] and arg1 changes to [27]
+# print(fn1()) # returns [27,27] and arg1 changes [27,27]
+
+# def func (a, b):
+#     b = 20
+#     print(a)
+#     print(b)
+#     a.append(15)
+#     print(a)
+#     c=a
+#     c.append(12)
+#     return c
+# a=9
+# z = [1,2,3,4]
+# x = func (z, a)
+# print(a)
+# print(z)
+# print(x)
+
+# arg1 = []
+# def fn1(arg1 = [], arg2 = 27):
+#     if arg1 == []:
+#         arg1 = []
+#     arg1.append(arg2)
+#     return arg1
+
+# def func2(a):
+#     print(a)
+#     a.append(15)
+#     print(a)
+#     c = []
+#     for val in a:
+#         c.append(val)
+#     c.append(12)
+#     return c
+#
+# z = [1,2,3,4]
+# x = func2(z)
+# print(z)
+# print(x)
+
+#output:
+# [1,2,3,4]
+# [1,2,3,4,15]
+# [1,2,3,4,15]
+# [1,2,3,4,15,12]
+
+
+#tuples are immutable sequences
+
+# to create a tuple
+# tupl = (1,2,3,4)
+# print(tupl)
+#
+# tupl1 = (1,) # if it has one value, it has to have a trailing comma
+#
+# tupl2 = tupl + tupl1
+# print(tupl2)
+#
+# myTuple = 1,2
+# print(myTuple) # (1,2)
+# myTuple = (1,)
+# print(myTuple) #(1,)
+# myTuple = (1)
+# print(myTuple) #(1)
+# myTuple = 1,
+# print(myTuple) #(1,)
+
+# commas are what create tuples, not the parentheses as we can see
+
+# myTuple = (1,2,3)
+# myList = [1,2,3]
+# newList = list(myList) #[1,2,3]
+# print(newList)
+# newTuple = tuple(myList) #(1,2,3)
+# print(newTuple)
+#
+# myTuple = (1,2,3)
+# myList = [1,2,3]
+# list(myList)
+# tuple(myList)
+# print(myTuple)
+# print(myList)
+
+def fun(list1,list2):
+    common = False
+    for elem1 in list1:
+        for elem2 in list2:
+            if elem1 == elem2:
+                return True
+
+    return common
+
+
+def fun2(list1, list2):
+    common = False
+    for elem1 in list1:
+        if elem1 in list2:
+            common = True
+
+    return common
+
+print(fun([1,2,3],[9,8,3]))
+print(fun2([1,2,3],[9,8,3]))
