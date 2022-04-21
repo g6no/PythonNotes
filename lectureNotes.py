@@ -1172,23 +1172,100 @@
 # print(myTuple)
 # print(myList)
 
-def fun(list1,list2):
-    common = False
-    for elem1 in list1:
-        for elem2 in list2:
-            if elem1 == elem2:
-                return True
+# def fun(list1,list2):
+#     common = False
+#     for elem1 in list1:
+#         for elem2 in list2:
+#             if elem1 == elem2:
+#                 return True
+#
+#     return common
+#
+#
+# def fun2(list1, list2):
+#     common = False
+#     for elem1 in list1:
+#         if elem1 in list2:
+#             common = True
+#
+#     return common
+#
+# print(fun([1,2,3],[9,8,3]))
+# print(fun2([1,2,3],[9,8,3]))
 
-    return common
+# define a dictionary dic = {key:value, key2:value2}
+
+# keys in dictionaries have to be immutable, so we cant use lists
+# values can be anything
+
+# index a dictionary using the key
+# print(dic[key]) #prints value
+# if key does not exist in dictionary, KeyError is returned
 
 
-def fun2(list1, list2):
-    common = False
-    for elem1 in list1:
-        if elem1 in list2:
-            common = True
+# dict = {'bill':123, (3,5,2):'Hello', 4.5:[1,2,3,4]}
+# print(dict[(3,5,2)]) # Hello
+# print(dict[4.5]) # [1, 2, 3, 4]
 
-    return common
+# to add a new key-value pair to a dictionary
+# dict['Jacob'] = 'new kv pair' # creates a new pair since Jacob doesn't exist initially
+# dict['bill'] = [1, 2, 3] # changes the value of bill
+# dict['Sam'] = 2.213 # creates new pair
 
-print(fun([1,2,3],[9,8,3]))
-print(fun2([1,2,3],[9,8,3]))
+# print(dict)
+
+# dictionaries are mutable objects that can be changed
+
+# we can delete items from a dictionary
+# del dict[key]
+# del dict[4.5]
+# print(dict) # deletes pair 4.5:[1,2,3,4]
+# del dict[4.5]
+# print(dict) #k
+
+# we can create an empty dictionary through this syntax
+# my_dict = {}
+# print(type(my_dict))
+
+# or
+# my_dict2 = dict
+# print(type(my_dict2))
+
+# when using the len function on a dictionary, it will return the number of key value pairs
+# dict = {'bill':123, (3,5,2):'Hello', 4.5:[1,2,3,4]}
+# for key in dict:
+#     print(key)
+#     print(dict[key])
+
+# dict.clear(deletes all elements in a dictionary and leaves it empty)
+# dict.get(key, default) return the value associated with key, or default if key doesn't exist
+# doesn't return a KeyValue Eroor
+
+# phonebook = {'Haya':123, 'Amal':333}
+# print(phonebook)
+# phone = phonebook.get('Haya')
+# print(phone)
+# print(phonebook.get('Hay'))
+# print(phonebook.get('Hay', 'Not found'))
+
+# phonebook = {'Haya':123, 'Amal':333, 'Salem':345, 'May':123}
+# print(phonebook)
+# my_dictionary_view = phonebook.items()
+# print(my_dictionary_view) # returns them as a tuple dict_items([('Haya', 123), ('Amal', 333), ('Salem', 345), ('May', 123)])
+# for key, value in my_dictionary_view:
+#     print(key, value)
+
+# for key in my_dictionary_view:
+#     print(key, my_dictionary_view[key]) # error, TypeError: 'dict_items' object is not subscriptable
+#
+# for key in my_dictionary_view:
+#     print(key) # ('Haya', 123)
+#                ('Amal', 333)
+#                ('Salem', 345)
+#                ('May', 123)
+# Prints
+# Haya 123
+# Amal 333
+# Salem 345
+# May 123
+
