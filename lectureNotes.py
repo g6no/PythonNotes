@@ -1269,3 +1269,259 @@
 # Salem 345
 # May 123
 
+
+#####################                               Lecture 16 Python                                ######################
+
+# dict = {'Ali':123, 'Lulwah':456, 'Ahmad':212, 'Sara':234}
+# print(dict) #{'Ali': 123, 'Lulwah': 456}
+# keys = dict.keys()
+# print(keys) # dict_keys(['Ali', 'Lulwah'])
+#
+# for key in keys:
+#     print(key)
+#
+# for key in dict:
+#     print(key)
+
+# print(dict.pop('Sara'))
+# print(dict)
+# print('+', dict.pop('Sara', 'None')) # It has to have a default, if not then keyError
+# print(dict)
+# print(dict.get('Sara'))
+# pop has to have a default value, but get if no default is specified return None
+# pop returns value associated with key, and removes the pair from the dictionary
+
+# popitem removes a random key-value pair from the dictionary, but usually removes the last item in dictionary
+# values returns all the dictionary values as a sequence
+
+# phonebook = {'Haya':123, 'Amal':333, 'Salem':345, 'May':123, 'Ahmad':345}
+# print(phonebook)
+# phone_num = phonebook.pop('Amal', 'Not Found')
+# print(phone_num)
+# print(phonebook)
+# phone_num = phonebook.pop('Laila', 'Not Found')
+# print(phone_num)
+# print(phonebook)
+# k, v = phonebook.popitem()
+# print(phonebook)
+# print(k,':',v, sep='')
+
+# my_values = phonebook.values()
+# print(my_values)
+#
+# for value in my_values:
+#     print(value)
+
+# to add a dictionary to a dictionary, or from an iterable we use the dictionary.update()
+
+# d = {1: "one", 2:"three"}
+# d1 = {2:"two"}
+# d.update(d1) # changes the value of 2 in d dictionary
+# print(d)
+# d1 = {3:"three"}
+# d.update(d1)
+# print(d)
+
+# dictionary = {'x':2}
+# dictionary.update([('y',3), ('z', 0)])
+# print(dictionary)
+#
+# dict2 = {"Ahmad":122, "Reem":332}
+# phonebook.update(dict2)
+# print(phonebook)
+#
+# calling an update function, without passing an arguement, will not change the dictionary
+#
+# lst = [[1,2],[3,4]]
+# phonebook.update(lst)
+# print(phonebook)
+
+# upd = [[(1,2),344], [1,5]]
+# phonebook.update(upd)
+# print(phonebook)
+#
+# upd = phonebook.update([[('Fajer', 2), [490, 200]]])
+# print(phonebook)
+# we can use
+
+# Dictionary Exercise
+
+# dictionary = {'Jane':5367, 'John':6254, 'Bob':5689}
+# dictionary['Jane'] = 1024
+# dictionary.update([('Jane', 3467)])
+# dictionary['Anna'] = 3237
+# print(dictionary['Bob'])
+# print(dictionary.get('Bob'))
+#
+# print(dictionary.keys())
+# print(dictionary.values())
+
+
+
+
+#####################                               Lecture 17 Python                                ######################
+
+# Set: object that stores a collection of data in the same way as a mathematical set
+
+# set1 = {'Sam', 1, 3.5}
+# print(type(set1)) # <class 'set'>
+
+# to create an empty set, use set()
+# emptSet = set()
+# print(emptSet)
+
+# set3 = set(4) # ERROR has to be in an iterable ()
+# set4 = set([1,2,4,6])
+# set5 = set('Ahmad')
+#
+# print(set4)
+# print(set5)
+
+# my_set = set()
+# print(my_set)  # set()
+# my_set = set('Hello')
+# print(my_set)  # {'o', 'H', 'e', 'l'}
+# my_set = set([1, 2, 4, 6, 7, 8, 1])
+# print(my_set)  # {1, 2, 4, 6, 7, 8}
+# my_set = set((1, 'a', 'July', 7.5))
+# print(my_set)  # {'a', 1, 'July', 7.5}
+
+
+# set methods:
+
+# len(set)  # number of elements in a set
+
+# add  # adds in element to a set
+#
+# my_set = set()
+# my_set.add(5)  # adds 5 to the list
+# my_set.add([5])  #error
+# print(my_set)
+#
+# my_set.update([4,[5,6]]) # error, every item in set has to have same level
+# print(my_set)
+
+# my_set = set()
+# my_set.add(1)
+# my_set.add(2)
+# my_set.add(3)
+# print(my_set)
+# my_set.update([4,5,6])
+# print(my_set)
+# set2 = set([7,8,9,10])
+# print(set2)
+# my_set.update(set2)
+# print(my_set)
+# print(set2)
+# my_set.update('abcd')
+# print(my_set)
+
+# remove an item from set using:
+# remove
+# discard
+# both take the item to be deleted as an argument
+# remove raises a keyerror exception if not found
+# discard does not raise an exception
+
+# my_set = set('abc')
+# my_copy = my_set.copy()
+# my_ref_copy = my_set
+# my_set.remove('b')
+# print(my_set)  # {'c', 'a'}
+# print(my_copy) # {'c', 'b', 'a'} # since this is a shallow copy, any change done to original set does not show
+# print(my_ref_copy)  #{'c', 'a'}
+
+# a for loop can be used to iterate over a set
+# for item in set:
+# we can also check if something is in the set
+# if 3 in set:
+# if 3 not in set:
+
+# we can find the union of two sets using two methods
+# set1.union(set2) # returns a new set
+# set1 | set2
+# all elements in set 1 and set 2 without repeat
+# both return a new set, and do not change the original sets
+
+# we can find the union of two sets using two methods
+# set1.intersection(set2) # returns a new set
+# set1 & set2
+# all elements in both set 1 and set 2
+# both return a new set, and do not change the original sets
+
+# a = {1, 2, 3, 4}
+# b = {3, 4, 2, 7}
+# c = {3, 7, 8, 4}
+#
+# d = a & b & c
+# print(d)  # {3, 4}
+#
+# e = a.intersection(b).intersection(c)
+# print(e)  # {3, 4}
+
+# we can find the difference between two sets using two methods
+# set1.difference(set2) # returns a new set
+# set1 - set2
+# all elements in set 1 but not in set 2
+# both return a new set, and do not change the original sets
+
+# set1 = {1, 2, 3, 4, 5}
+# set2 = {3, 4, 5, 6, 7}
+#
+# set3 = set1.difference(set2)
+# set4 = set1 - set2
+# set5 = set2.difference(set1)
+# set6 = set2 - set1
+#
+# print(set3)
+# print(set4)
+# print(set5)
+# print(set6)
+
+# Symmetric difference of two sets: a set that contains the elements that are not shared by the two sets كل شي ما عدا التقاطع
+
+# set1 = set([1, 2, 3, 4, 5])
+# set2 = set([3, 4, 5, 6, 7])
+#
+# set3 = set1.symmetric_difference(set2)
+# set4 = set1 ^ set2
+#
+# print(set3)
+# print(set4)
+
+# Set A is subset of set B if all the elements in set A are included in set B
+# to check use either setA.issubset(setB)
+# to check use either setA <= setB
+
+# Set A is superset of set B if it contains all the elements of set B
+# to check use either setA.issuperset(setB)
+# to check use either setA >= setB
+
+# set1 = set()
+# set2 = {4, 5, 6}
+# set3 = {4, 5, 6}
+# set4 = {4, 5}
+# set5 = {7, 8}
+# set6 = {7, 8}
+#
+# print(set1.issubset(set2))  # True
+# print(set3.issuperset(set2))  # True
+# print(set4 <= set2)  # True
+# print(set5 >= set2)  # False
+# print(set5.issubset(set6))  # True
+
+
+# a = {1, 2, 3, 4}
+# b = {1, 3, 5, 7}
+#
+# c = a | b  # a.union(b)
+# d = a - b
+# e = b.difference(a)  # b - a
+# f = a.intersection(b)  # a & b
+# g = a ^ b # a.symmetric_difference(b)
+#
+# print(c)  # {1, 2, 3, 4, 5, 7}
+# print(d)  # {2, 4}
+# print(e)  # {5, 7}
+# print(f)  # {1, 3}
+# print(g)  # {2, 4, 5, 7}
