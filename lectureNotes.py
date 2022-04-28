@@ -816,9 +816,7 @@
 # we use random.seed(int) at the start of the program, and it fixes
 
 #####################                               Lecture 12 Python                                ######################
-#nothing
-
-
+# nothing
 
 
 #####################                               Lecture 13 Python                                ######################
@@ -1032,7 +1030,7 @@
 # print(c_list)
 # the change done on b is not reflected on c, since it is a deep
 
-#two dimensional list, is  a list that contains other lists as an element
+# two dimensional list, is  a list that contains other lists as an element
 
 # mtrx = [[0,0,0,0,0], [0,0,0,0,0], [0,0,0,0,0]]
 # for i in range(len(mtrx)):
@@ -1129,14 +1127,14 @@
 # print(z)
 # print(x)
 
-#output:
+# output:
 # [1,2,3,4]
 # [1,2,3,4,15]
 # [1,2,3,4,15]
 # [1,2,3,4,15,12]
 
 
-#tuples are immutable sequences
+# tuples are immutable sequences
 
 # to create a tuple
 # tupl = (1,2,3,4)
@@ -1357,8 +1355,6 @@
 # print(dictionary.values())
 
 
-
-
 #####################                               Lecture 17 Python                                ######################
 
 # Set: object that stores a collection of data in the same way as a mathematical set
@@ -1525,3 +1521,102 @@
 # print(e)  # {5, 7}
 # print(f)  # {1, 3}
 # print(g)  # {2, 4, 5, 7}
+
+
+#####################                               Lecture 18 Python                                ######################
+
+# What we have done up to this point is all procedural programming
+
+# We'll learn Object oriented programming, where we deal mainly with objects
+# that contain data and procedures in a process known as encapsulation
+
+# Advantages of oop: 1- Data hiding 2- Reusability
+
+# Data attributes: defines the state of an object
+
+# to manipulate an object and its attributes from outside, we use public methods
+
+# anything that manipulates attributes without external code is done through private methods
+
+# to define an object in python, we use classes
+
+# classes are basically a user-created type in python
+
+# instances are objects created from a class
+
+# we can think of classes as a blueprint, and of instances as objects built from that blueprint
+
+# First class: Student Class
+
+# Data attributes are also called instance attributes, since they are specific for each instance
+
+# When I create a class, we have to use a constructor to create an instance of that class
+
+# This is done through the initializer method, __init__(self, atr1, atr2..., atrn):
+# The initializer is automatically called when a class is called
+# Self has to be the first parameter in an initializer
+# An initializer is usually the first method in a class definition
+
+
+# class Student:
+#
+#     def __init__(self, first='', last='', id=0, gpa=0, credits=0, grades=[]):
+#         self.first_name = first
+#         self.last_name = last
+#         self.id = id
+#         self.gpa = gpa
+#         self.credits = credits
+#         self.grades = grades
+#
+#     def print_msg(self):
+#         # we can create new data attributes inside a method, but it is not recommended
+#         print(self.first_name, self.last_name, self.id, self.grades)
+#
+#     def add_grade(self, g):
+#         if g == 'A' or g == 'B' or g == 'C' or g == 'D' or g == 'F':
+#             self.grades.append(g)
+#             self.credits += 3
+#         else:
+#             print('Error, Invalid Grade')
+#
+#
+# student1 = Student("Ahmad", "Alqattan", 2192131011, 4.00, 61, ['A'])
+# student1.print_msg()
+# student1.add_grade('B')
+# student1.print_msg()
+
+# import random
+#
+# class Coin:
+#     def __init__(self):
+#         self.sideup = 'Heads'
+#
+#     def toss(self):
+#         if random.randint(0,1) == 0:
+#             self.sideup = 'Heads'
+#         else:
+#             self.sideup = 'Tails'
+#
+#     def get_sideup(self):
+#         return self.sideup
+#
+#
+# def main():
+#     my_coin = Coin()
+#     print('This side is up:', my_coin.get_sideup())
+#     print('I am tossing the coin')
+#     my_coin.toss()
+#     print('This side is up:', my_coin.get_sideup())
+#
+# main()
+
+# If many instances of a class are created, each would have its own set of attributes
+
+# There are other attributes called class attributes which are shared amongst all instances of that class
+# convention is to have them in all upper case
+
+# Although we can use class attributes from class instances,
+# we can also use them from class objects, without creating an instance:
+# person = Person(a,b,c)
+# person.TITLES
+# Person.TITLES
