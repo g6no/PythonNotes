@@ -1753,3 +1753,129 @@
 # val = Sales(123)
 # print(val.id)
 
+
+# A private variable can only be accessed inside the class block (the class definition, not in main)
+
+# to name a private variable, use __ (double underlines) in front of any variable
+
+# We should always add set and get methods to update the private variable
+
+# Private variables should be accessed through the class methods only
+
+# using only one underscore _ , we can still access it from outside
+# but when we import it, for example: from Coin import *
+
+# Accessor methods: return a value from a class’s attribute without changing it --> get
+
+# Mutator methods: store or change the value of a data attribute --> set
+
+# the same concept for private methods: A private method can only be used (accessed) within the class to do
+# some internal calculations.
+
+# Also, it follows the same naming convention, double __ or single _ underscore to indicate that this method is private
+
+# Why we use private access to data (instance) attributes?
+# - To ensure the integrity of object’s data - To ensure class encapsulation property
+
+# Class encapsulation
+# - A class should implement all its functionalities and
+# use its fields without revealing how it is implemented to the client.
+# - A client only has the class interface
+# - A client only knows how to use the class but not how it implements its functions.
+
+# def set_gpa(self, gpa):
+#     if 0 <= gpa <= 4:
+#         self.__gpa = gpa
+#     else:
+#         print('Invalid GPA')
+
+# Advantage of setters and getters is that we can change the way
+# that an attribute is generated inside the object without affecting any code which uses the object
+
+# Advantage of setters and getters is that we can change the way
+# that an attribute is generated inside the object without
+# affecting any code which uses the object
+
+# class Person:
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#
+#     @property
+#     def fullname(self):
+#         return f'{self.name} {self.surname}'
+#
+#
+# Jane = Person('Jane', 'Smith')
+# print(Jane.fullname)   # in this case, we call the function as if it was a height variable, not a function
+
+# There are also decorators which we can use to define a setter and
+# a deleter for our attribute (a deleter will delete the attribute from our object).
+
+# The getter, setter and deleter methods must all have the same name.
+
+# class Person:
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#
+#     @property
+#     def fullname(self):
+#         return f'{self.name} {self.surname}'
+#
+#     @fullname.setter
+#     def fullname(self, val):
+#         name, surname = val.split(' ', 1)
+#         self.name = name
+#         self.surname = surname
+#
+#     @fullname.deleter
+#     def fullname(self):
+#         del self.name
+#         del self.surname
+
+# we cna also use this with private variables
+
+# class Numbers:
+#     MULTIPLIER = 3
+#
+#     def __init__(self, x = 1, y = 1):
+#         self.x = x
+#         self.y = y
+#
+#
+#     def add(self):
+#         return self.x + self.y
+#
+#     @classmethod
+#     def multiply(cls, a):
+#         return a * cls.MULTIPLIER
+#
+#     @staticmethod
+#     def subtract(b,c):
+#         return b - c
+#
+#     @property
+#     def value(self):
+#         return (self.x, self.y)
+#
+#     @value.setter
+#     def value(self, xy_tuple):
+#         self.x, self.y = xy_tuple
+#
+#     @value.deleter
+#     def value(self):
+#         del self.x
+#         del self.y
+#
+# my_number = Numbers(2,5)
+# print('Adding is', my_number.add())
+# print(f'Multiply is {my_number.multiply(4)}')
+# print(f'Multiply is {Numbers.multiply(4)}')
+#
+# print(f'Subtract is {my_number.subtract(5,2)}')
+# print(f'Subtract is {Numbers.subtract(5,2)}')
+#
+# print(my_number.value)
+# my_number.value = 6,7
+# print(my_number.value)
