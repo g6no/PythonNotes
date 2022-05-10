@@ -1620,3 +1620,136 @@
 # person = Person(a,b,c)
 # person.TITLES
 # Person.TITLES
+
+
+
+# sum1 = 0
+# for i in range(5):
+#     num = int(input(f"Product{i}: "))
+#     sum1 += num
+#     lst_0.append(num)
+
+# We can also define attributes which are set on the class.
+# These attributes will be shared by all instances of that class.
+# In many ways they behave just like instance attributes, but there are some caveats that you should be aware of.
+
+# class Person:
+#     TITLES = ('Dr','Mr', 'Mrs', 'Ms')
+#
+#     def __init__(self, title, name, surname):
+#         if title not in self.TITLES:
+#             raise ValueError(f'{title} is not a valid title.')
+#
+#         # these variables are specific to each instance of the class
+#         self.title = title
+#         self.name =name
+#         self.surname = surname
+#
+#
+# ahmad = Person('Mr', 'Ahmad', 'Alqattan')
+
+# two ways to access class attributes in a class, we can also access this variable without creating an instance
+
+# print(ahmad.TITLES)
+# print(Person.TITLES)
+
+# class attributes can be used to provide default attribute values
+
+# class isDead:
+#     deceased = False
+#
+#     def mark_as_deceased(self):
+#         deceased = True
+#
+# class Person:
+#     pets = set()
+#     # this is shared across all instances of the class
+#     # be careful when handling
+#
+#     def add_pet(self, pet):
+#         self.pets.add(pet)
+#
+# jane = Person()
+# bob = Person()
+#
+# jane.add_pet('cat')
+# print(jane.pets)
+# print(bob.pets)
+
+# class Person:
+#
+#     def __init__(self):
+#         self.pets = []
+#
+#     def add_pet(self, pet):
+#         self.pets.append(pet)
+#
+# jane = Person()
+# bob = Person()
+#
+# jane.add_pet('cat')
+# print(jane.pets)
+# print(bob.pets)
+
+# Exercise
+
+# class Smith:
+#     surname = "Smith"
+#     profession = "smith"
+#
+#     def __init__(self, name, profession = None):
+#         self.name = name
+#         if profession is not None:
+#             self.profession = profession
+
+# Name: instance, value depends on arg
+# surname: class, always = 'Smith'
+# profession: both, = 'smith' if no input, and = input if it exists
+
+
+# v1 = Smith('Jane')
+# v2 = Smith('Jack', 'Doctor')
+#
+# print(v1.profession)  # smith
+# print(v2.profession)  # Doctor
+
+
+# decorators are functions which are used to modify the behaviour of other functions.
+
+# Just like we can define class attributes, which are shared
+# between all instances of a class, we can define class methods
+
+# A class method still has its calling object as the first parameter,
+# but by convention we rename this parameter from self to cls.
+
+# class Person:
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     @classmethod
+#     def from_text_file(cls, filename):
+#         print(filename)
+
+# class Person:
+#     TITLES = ('Dr', 'Mr', 'Mrs', 'Ms')
+#
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#
+#     def fullname(self):
+#         return f'{self.name} {self.surname}'
+#
+#     @classmethod
+#     def allowed_titles_starting_with(cls, startswith):
+
+# class Sales:
+#     def __init__(self, id):
+#         self.id = id
+#         id = 100
+#
+# print(val.id)
+# val = Sales(123)
+# print(val.id)
+
