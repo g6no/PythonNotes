@@ -1879,3 +1879,55 @@
 # print(my_number.value)
 # my_number.value = 6,7
 # print(my_number.value)
+
+# Methods and functions often need to accept objects as arguments
+# When you pass an object as an argument, you are actually passing a reference to the object
+# That means that any change that happens to the reference will appear in the original object
+
+# Object’s state: the values of the object’s attribute at a given moment
+
+# __str__ method: displays the object’s state
+# --> Automatically called when the object is passed as an argument to the print function
+# --> Automatically called when the object is passed as an argument to the str function
+
+# class BankAccount:
+#     def __init__(self, bal):
+#         self.__balance = bal
+#
+#     def deposit(self, amount):
+#         self.__balance += amount
+#
+#     def withdraw(self, amount):
+#         if self.__balance >= amount:
+#             self.__balance -= amount
+#         else:
+#             print('Insufficient')
+#
+#     def __str__(self):
+#         return f'The balance is ${self.__balance:.2f}'
+
+# __name__ are called magic methods, they are pre-defined by python and are
+# called implicitly whenever a condition is achieved
+
+# These names indicate that these properties have a special meaning
+# you shouldn’t create your own methods or attributes with the same names unless you mean to overload them.
+
+# __eq__(self, other):
+#   return self.balance == other.balance
+
+# account1 == account2 --> same as: account1.__eq__(account2)
+
+#  It is also often useful to overload the comparison methods,
+#  so that we can use comparison operators on our person objects.
+# • By default, our person objects are only equal if they are the same object,
+# and you can’t test whether one person object is greater than another because person objects have no default order.
+
+# Comparison doesn't have to be of objects of the same type
+
+# let's imagine that we have two classes CsStu and EngStu
+# Then it is logical that we can compare the two classes if they both have an attribute called gpa
+
+# uml diagram: class name/ date attributes/ class methods
+
+# if there is a has a relationship, we link the UML diagrams using a line
+
