@@ -2099,7 +2099,7 @@
 
 # Frame widget: container that holds other widgets
 
-# from tkinter import *
+from tkinter import *
 #
 #
 # class MyGUI:
@@ -2121,6 +2121,7 @@
 #         self.Label5.pack(side='left')
 #         self.Label6.pack(side='left')
 #         self.top_frame.pack()
+#         self.top_frame.pack_forget()
 #         self.bottom_frame.pack()
 #
 #
