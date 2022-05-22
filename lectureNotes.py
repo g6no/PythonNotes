@@ -1622,7 +1622,6 @@
 # Person.TITLES
 
 
-
 # sum1 = 0
 # for i in range(5):
 #     num = int(input(f"Product{i}: "))
@@ -1930,4 +1929,203 @@
 # uml diagram: class name/ date attributes/ class methods
 
 # if there is a has a relationship, we link the UML diagrams using a line
+
+# object: parent of all classes in python
+# it is preferred to explicitly inherit from the object class, if I do not write it it is implicitly called
+# class Vehicle(object):
+
+# Inheritance (Is a: )
+# Is a: exists when one object is a specialized version of another object
+# It means that the Specialized object has all the
+# characteristics of the general object plus unique characteristics
+
+# Rectangle is a shape (it has t)
+
+# If class B inherits class A
+# Then: class B is the subclass, and A is the superclass
+
+# B "is a" A
+
+# Ahmad is a human
+
+# Is a (Ahmad is a student), Ahmad is a subclass of superclass Student
+# Has a (Ahmad has a course), Ahmad has an initalized object of class Course
+
+# When I have a constructor (__init__) in a subclass,
+# I have to explicitly call the constructor of the superclass, and pass to it the parameters it needs and self
+
+# Bounded method Calling
+
+# Normal method calls are called bound methods. Bound methods have an instance
+# in front of the method call and automatically pass self
+# my_inst = MyClass()
+# my_inst.method(arg1,arg2)
+
+
+# it is also possible to call a method without Python binding self. In that case, the user has to do it.
+# Unbound methods are called as part of the class but self passed by the user
+#
+# my_inst = MyClass()
+# MyClass.method(my_inst, arg2, arg3)  # self is passed explicitly (my_inst here)!
+
+# To call superclass methods, there are two scenarios:
+# 1- The method is inherited from the super class but not overridden:
+# self.methodName()
+
+# 2- The method in the subclass is overridden:
+# superclassName.methodName(self, param1, param2, ..)
+# super().methodName(param1, param2, ..)
+# You can use this way of calling for scenario1 as well, but cannot use self in scenario 2!
+
+# There is a special method in python called super(), which directly calls the direct parent of the subclass
+
+# class A:
+#     def __init__(self):
+#         self.__i = 1  # When I have a private variable, that variable cannot be called from the child class
+#         self.j = 5
+#
+#     def display(self):
+#         print(self.__i, self.j)
+#
+#
+# class B(A):
+#     def __init__(self):
+#         A.__init__(self)
+#         self.__i = 2
+#         self.j = 7
+#
+#
+# c = B()
+# c.display()  # 1 7
+
+# Multiple Inheritance
+
+# class A:
+#     def method(self):
+#         print('A.method() called')
+#
+#
+# class B:
+#     def method(self):
+#         print('B.method() called')
+#
+#
+# class C (A,B):
+#     pass
+#
+#
+# class D (C,B):
+#     pass
+#
+# c = C()
+# c.method()
+#
+# d = D()
+# d.method()
+
+# The order of precedence is from left to right
+# class X:
+#     pass
+#
+# class Y:
+#     pass
+#
+# class Z:
+#     pass
+#
+# class A(X,Y):
+#     pass
+#
+# class B(Y,Z):
+#     pass
+#
+# class M(B,A,Z):
+#     pass
+#
+# print(M.mro())
+
+# super always follows the mro
+
+# Class continuation
+
+
+# Gui programs are event-driven programs
+
+# We'll be using tkinter as our GUI
+
+# Programs that use tkinter do not always run reliably under IDLE
+
+# Most programmers take an object-oriented approach when writing GUI programs
+
+# The __init__ method build the interface
+
+# To create the main window, main_window = tkinter.Tk()
+
+# import tkinter
+#
+#
+# class MyGUI:
+#     def __init__(self):
+#         self.main_window = tkinter.Tk()
+#         tkinter.mainloop()
+#
+#
+# my_gui = MyGUI
+
+# GUI widgets:
+
+# to create a label in tkinter: tkinter.Label(self.main_window, text = 'My text')
+
+# pack method: determines where a widget should be positioned and makes it visible
+# when the main window is displayed
+
+# self.label = tkinter.Label()
+
+# self.label.pack() #by default arg is side = 'top'
+
+# import tkinter
+# class MyGUI:
+#     def __init__(self):
+#         self.main_window = tkinter.Tk()
+#         self.label1 = tkinter.Label(self.main_window, text='Hello World!', foreground='white')
+#         self.label2 = tkinter.Label(self.main_window, text='This is my GUI program.')
+#
+#         self.label1.pack(side='left')
+#         self.label2.pack(side='left')
+#
+#         tkinter.mainloop()
+# my_gui = MyGUI()
+
+
+# Frame widget: container that holds other widgets
+
+# from tkinter import *
+#
+#
+# class MyGUI:
+#     def __init__(self):
+#         self.main_window = Tk()
+#         self.top_frame = Frame(self.main_window)
+#         self.Label1 = Label(self.top_frame, text='winken')
+#         self.Label2 = Label(self.top_frame, text='Blinken')
+#         self.Label3 = Label(self.top_frame, text='Nod')
+#         self.bottom_frame = Frame(self.main_window)
+#         self.Label4 = Label(self.bottom_frame, text='winken')
+#         self.Label5 = Label(self.bottom_frame, text='Blinken')
+#         self.Label6 = Label(self.bottom_frame, text='Nod')
+#
+#         self.Label1.pack(side='top')
+#         self.Label2.pack(side='top')
+#         self.Label3.pack(side='top')
+#         self.Label4.pack(side='left')
+#         self.Label5.pack(side='left')
+#         self.Label6.pack(side='left')
+#         self.top_frame.pack()
+#         self.bottom_frame.pack()
+#
+#
+#         mainloop()
+#
+#
+# my_gui = MyGUI()
 
