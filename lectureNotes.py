@@ -2099,7 +2099,7 @@
 
 # Frame widget: container that holds other widgets
 
-from tkinter import *
+# from tkinter import *
 #
 #
 # class MyGUI:
@@ -2129,4 +2129,207 @@ from tkinter import *
 #
 #
 # my_gui = MyGUI()
+
+
+# Q: Choose Rate category
+# from tkinter import *
+#
+#
+# class MyGUI:
+#     def __init__(self):
+#         self.main_window = Tk()
+#         self.top_frame = Frame(self.main_window)
+#         self.Label1 = Label(self.top_frame, text='Choose rate category:')
+#         self.radio_var = IntVar()
+#         self.rb1 = Radiobutton(self.top_frame, text='Daytime ($0.07)', variable=self.radio_var, value=1)
+#         self.rb2 = Radiobutton(self.top_frame, text='Evening ($0.12)', variable=self.radio_var, value=2)
+#         self.rb3 = Radiobutton(self.top_frame, text='Off-Peak ($0.05)', variable=self.radio_var, value=3)
+#
+#         self.entry_frame = Frame(self.main_window)
+#         self.label2 = Label(self.entry_frame, text='Enter the number of minutes:')
+#         self.entry1 = Entry(self.entry_frame, width = 10)
+#         self.label3 = Label(self.entry_frame, text='mins')
+#         self.bottom_frame = Frame(self.main_window)
+#         self.button1 = Button(self.bottom_frame, text='calculate', width=10, command=self.calculate)
+#         self.button2 = Button(self.bottom_frame, text='quit', width=10, command=self.main_window.destroy)
+#
+#         self.Label1.pack(side='top')
+#         self.rb1.pack(side='left')
+#         self.rb2.pack(side='left')
+#         self.rb3.pack(side='left')
+#         self.label2.pack(side='left')
+#         self.entry1.pack(side='left')
+#         self.label3.pack(side='right')
+#         self.button1.pack(side='left')
+#         self.button2.pack(side='right')
+#         self.top_frame.pack(side='top')
+#         self.entry_frame.pack()
+#         self.bottom_frame.pack()
+#
+#         mainloop()
+#
+#
+#     def calculate(self):
+#         if self.radio_var.get() == 1:
+#             rate = 0.07
+#         elif self.radio_var.get() == 2:
+#             rate = 0.12
+#         else:
+#             rate = 0.05
+#         result = rate * float(self.entry1.get())
+#         tkinter.messagebox.showinfo('result', f'{result:.2f}')
+#         rate * float(self.entry1.get())
+#
+#
+# my_gui = MyGUI()
+#
+# from tkinter import *
+
+# from tkinter import *
+#
+# class OilChange:
+#     def __init__(self):
+#         self.main_window = Tk()
+#
+#         self.frame1 = Frame(self.main_window)
+#         self.frame1.pack(side='top')
+#
+#         self.cb1_var = IntVar()
+#         self.cb1_var.set(26.00)
+#         self.cb1 = Checkbutton(self.frame1, text='oil change', variable=self.cb1_var)
+#         self.cb1.pack(side='left')
+#
+#         self.cb2_var = IntVar()
+#         self.cb2_var.set(26.00)
+#         self.cb2 = Checkbutton(self.frame1, text='lube job', variable=self.cb1_var)
+#         self.cb2.pack(side='right')
+#
+#         self.frame2 = Frame(self.main_window)
+#         self.frame2.pack(side='top')
+#
+#         self.cb3_var = IntVar()
+#         self.cb3_var.set(26.00)
+#         self.cb3 = Checkbutton(self.frame2, text='oil change', variable=self.cb1_var)
+#         self.cb3.pack(side='left')
+#
+#         self.cb4_var = IntVar()
+#         self.cb4_var.set(26.00)
+#         self.cb4 = Checkbutton(self.frame2, text='oil change', variable=self.cb1_var)
+#         self.cb4.pack(side='right')
+#
+#         self.frame3 = Frame(self.main_window)
+#         self.frame3.pack(side='top')
+#
+#         self.cb5_var = IntVar()
+#         self.cb5_var.set(26.00)
+#         self.cb5 = Checkbutton(self.frame3, text='oil change', variable=self.cb1_var)
+#         self.cb5.pack(side='left')
+#
+#         self.cb6_var = IntVar()
+#         self.cb6_var.set(26.00)
+#         self.cb6 = Checkbutton(self.frame3, text='oil change', variable=self.cb1_var)
+#         self.cb6.pack(side='right')
+#
+#         self.frame4 = Frame(self.main_window)
+#         self.frame4.pack(side='top')
+#
+#         self.cb7_var = IntVar()
+#         self.cb7_var.set(26.00)
+#         self.cb7 = Checkbutton(self.frame4, text='oil change', variable=self.cb1_var)
+#         self.cb7.pack(side='left')
+#
+#
+#         mainloop()
+# OilChange()
+
+# from tkinter import *
+#
+# class OilChange:
+#     def __init__(self):
+#         self.main_window = Tk()
+#
+#         self.f1 = Frame(self.main_window)
+#         self.f1.pack()
+#
+#         self.f2 = Frame(self.f1)
+#         self.f2.pack(side='left')
+#
+#         self.services = []
+#
+#         self.oil = IntVar()
+#         self.services.append(self.oil)
+#         self.oil_cb = Checkbutton(self.f2, text='Radio', variable=self.oil)
+#         self.oil_cb.pack()
+#
+#         self.rad = IntVar()
+#         self.services.append(self.rad)
+#         self.rad_cb = Checkbutton(self.f2, text='Radio', variable=self.rad)
+#         self.rad_cb.pack()
+#
+#         self.ins = IntVar()
+#         self.services.append(self.ins)
+#         self.ins_cb = Checkbutton(self.f2, text='ins', variable=self.ins)
+#         self.ins_cb.pack()
+#
+#         self.tire = IntVar()
+#         self.services.append(self.tire)
+#         self.tire_cb = Checkbutton(self.f2, text='Radio', variable=self.tire)
+#         self.tire_cb.pack()
+#
+#         self.f3 = Frame(self.f1)
+#         self.f3.pack(side='right')
+#
+#         self.lube = IntVar()
+#         self.services.append(self.lube)
+#         self.lube_cb = Checkbutton(self.f3, text='Radio', variable=self.lube)
+#         self.lube_cb.pack()
+#
+#         self.trans = IntVar()
+#         self.services.append(self.trans)
+#         self.trans_cb = Checkbutton(self.f3, text='Radio', variable=self.trans)
+#         self.trans_cb.pack()
+#
+#         self.muf = IntVar()
+#         self.services.append(self.muf)
+#         self.muf_cb = Checkbutton(self.f3, text='ins', variable=self.muf)
+#         self.muf_cb.pack()
+#
+#         self.f4 = Frame(self.main_window)
+#         self.f4.pack()
+#
+#         self.total_l = Label(self.f4, text = 'Total charges: $')
+#         self.total_l.pack(side= 'left')
+#
+#         self.total_var = StringVar()
+#         self.result = Label(self.f4)
+#
+#
+#
+#
+#         mainloop()
+# OilChange()
+
+rows = []
+sum_list = []
+
+for i in range(3):
+    print(f'Enter Elements of row {i}')
+    sum = 0
+    columns = []
+    for i in range(5):
+        num = int(input())
+        sum += num
+        columns.append(num)
+    sum_list.append(sum)
+    rows.append(columns)
+
+for i in range(3):
+    print()
+    for j in range(5):
+        print(rows[i][j], end=' ')
+
+print('\n')
+for i in range(3):
+    print(f'Sum of row {i} is {sum_list[i]}')
+
 
